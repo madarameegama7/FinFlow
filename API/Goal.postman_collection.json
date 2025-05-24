@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "59a51fed-728d-46dd-812d-97a7c5c8ae81",
+		"name": "Goal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33620906"
+	},
+	"item": [
+		{
+			"name": "Add goal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNzAwMDIwLCJleHAiOjE3NDE5NTkyMjB9._hR6YUtNMi47kvzJutsyPO7jTndIzEaAYftapm6Q0Tw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Buy a Car\",\r\n  \"targetAmount\": 5000000,\r\n  \"deadline\": \"2026-06-30T00:00:00Z\",\r\n  \"autoSavePercentage\": 15,\r\n  \"currency\": \"USD\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/goals",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"goals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit goal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNzAxMjEyLCJleHAiOjE3NDE5NjA0MTJ9.0txhNr62zGwcMKb9zdL_MLBB0d-bOkK86w7OEbh5OL4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"_id\": \"67d03f2f8caef4f243545bb8\",\r\n  \"title\": \"Buy a Benz\", \r\n  \"targetAmount\": 6000000, \r\n  \"savedAmount\": 100000, \r\n  \"deadline\": \"2026-12-31T00:00:00.000+00:00\",\r\n  \"autoSavePercentage\": 20, \r\n  \"priorityLevel\": 2, \r\n  \"currency\": \"USD\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/goals/67d03f2f8caef4f243545bb8",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"goals",
+						"67d03f2f8caef4f243545bb8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get goal progress",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MzNTVjM2Y0ZWM2ZTZmNDYzMTRkMWIiLCJlbWFpbCI6ImRpbnVtZWVnYW1hOTdAZ21haWwuY29tIiwiaWF0IjoxNzQxNjAxNTAzLCJleHAiOjE3NDE4NjA3MDN9.vK0gxS1syVhRmHgav5J1qU3ZCvwmUCJZKIncsPHbfcU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/goals",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"goals"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

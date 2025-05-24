@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "df75edba-b570-44f7-be17-9b2b8906104b",
+		"name": "Transactions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33620906"
+	},
+	"item": [
+		{
+			"name": "GET All transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNzEyNjgyLCJleHAiOjE3NDE5NzE4ODJ9.Ue8nsAeqXnhGIhuFOAKoCYcs8HlB8Ey1YRONSIrrbK8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MzMTVlOTFkNDUzNGE2NTRkNDZlNDMiLCJpYXQiOjE3NDA4MzkwNTMsImV4cCI6MTc0MTA5ODI1M30.ekCb-AHoQe-02VB35sZR9vL7jHdJ1hrbpX-y_GaTiY4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transaction by tag",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNjk2NzA4LCJleHAiOjE3NDE5NTU5MDh9.8IvYCGuOOegLApHt-em0Ac2awpJ6yIMEf-8BguvglmU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/transactions/tag/watch",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions",
+						"tag",
+						"watch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNjk2NzA4LCJleHAiOjE3NDE5NTU5MDh9.8IvYCGuOOegLApHt-em0Ac2awpJ6yIMEf-8BguvglmU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userEmail\": \"damithrimeegama2002@gmail.com\",\r\n  \"type\": \"expense\",\r\n  \"amount\": 200000,\r\n  \"category\": \"Entertainment\",\r\n  \"tags\": [\"#gambling\", \"#betting\"],\r\n  \"transactionDate\": \"2025-03-11T23:00:00.000Z\",\r\n  \"description\": \"Lost a bet on a football game\",\r\n  \"recurring\": {\r\n    \"isRecurring\": false\r\n  },\r\n  \"autoSave\": false,\r\n  \"currency\": \"GBP\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/transactions/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNjk2NzA4LCJleHAiOjE3NDE5NTU5MDh9.8IvYCGuOOegLApHt-em0Ac2awpJ6yIMEf-8BguvglmU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/transactions/67d02fe2a72b0fa58e7ee97c",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions",
+						"67d02fe2a72b0fa58e7ee97c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNjk2NzA4LCJleHAiOjE3NDE5NTU5MDh9.8IvYCGuOOegLApHt-em0Ac2awpJ6yIMEf-8BguvglmU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userEmail\": \"damithrimeegama2002@gmail.com\",\r\n  \"type\": \"expense\",\r\n  \"amount\": 280000,\r\n  \"category\": \"Entertainment\",\r\n  \"tags\": [\"#luxury\", \"#watch\"],\r\n  \"transactionDate\": \"2025-03-02T10:00:00.000Z\",\r\n  \"description\": \"Bought a Rolex instead of a normal watch\",\r\n  \"recurring\": {\r\n    \"isRecurring\": false\r\n  },\r\n  \"autoSave\": false,\r\n  \"currency\": \"GBP\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/transactions/67d02fe2a72b0fa58e7ee97c",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions",
+						"67d02fe2a72b0fa58e7ee97c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transaction by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNjk2NzA4LCJleHAiOjE3NDE5NTU5MDh9.8IvYCGuOOegLApHt-em0Ac2awpJ6yIMEf-8BguvglmU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/transactions/67d02f84a72b0fa58e7ee964",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions",
+						"67d02f84a72b0fa58e7ee964"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"damithrimeegama2002@gmail.com\",\r\n    \"password\":\"Damithri@2025\",\r\n    \"preferredCurrency\":\"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upcoming transactions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNjk3OTkyLCJleHAiOjE3NDE5NTcxOTJ9.B171wr4joX4GpdJJrVK1YY0-7dEf0gMXmjcqRAd6Q0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/transactions/upcoming",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions",
+						"upcoming"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

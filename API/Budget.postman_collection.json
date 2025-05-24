@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "d24b189b-8062-446d-a6a3-6bcf0ca9830c",
+		"name": "Budget",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33620906"
+	},
+	"item": [
+		{
+			"name": "Save Budget",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MzNTVjM2Y0ZWM2ZTZmNDYzMTRkMWIiLCJlbWFpbCI6ImRpbnVtZWVnYW1hOTdAZ21haWwuY29tIiwiaWF0IjoxNzQxNjc0ODU1LCJleHAiOjE3NDE5MzQwNTV9.m0fkjoRvkZPRrKPYyf16cObYV9i-Q4W0M9i5y6bUYgg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userEmail\":\"dinumeegama97@gmail.com\",\r\n    \"amount\":30,\r\n    \"category\":\"Food\",\r\n    \"month\":\"April\",\r\n    \"currency\":\"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/budget",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"budget"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Budget status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MzNTVjM2Y0ZWM2ZTZmNDYzMTRkMWIiLCJlbWFpbCI6ImRpbnVtZWVnYW1hOTdAZ21haWwuY29tIiwiaWF0IjoxNzQxMzkzNzI1LCJleHAiOjE3NDE2NTI5MjV9.iv7xg7sZ_o2cSyTMrJZQsRm0SxulxPXozDCPhTt7ttU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\": \"Food\",\r\n    \"month\": \"Mar\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/budget/status",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"budget",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MzNTVjM2Y0ZWM2ZTZmNDYzMTRkMWIiLCJlbWFpbCI6ImRpbnVtZWVnYW1hOTdAZ21haWwuY29tIiwiaWF0IjoxNzQxMzkzNzI1LCJleHAiOjE3NDE2NTI5MjV9.iv7xg7sZ_o2cSyTMrJZQsRm0SxulxPXozDCPhTt7ttU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\": \"Food\",\r\n    \"month\": \"Mar\",\r\n    \"spentAmountSoFar\":200\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/budget/recommendations",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"budget",
+						"recommendations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

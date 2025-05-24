@@ -1,0 +1,9 @@
+#npm package lock file-dependency versions are different across different environments
+package-lock.json 
+
+#nodejs dependencies- it's large and never committed to Git because anyone can install it by npm install
+/node_modules/
+
+#environment variables-sensitive data shouldn't be shared to public
+.env 
+

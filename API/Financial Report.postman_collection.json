@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "fd46298c-5ba2-4584-9b3e-f7e987545149",
+		"name": "Financial Report",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33620906"
+	},
+	"item": [
+		{
+			"name": "getIncomeExpenseReport",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNjk3OTkyLCJleHAiOjE3NDE5NTcxOTJ9.B171wr4joX4GpdJJrVK1YY0-7dEf0gMXmjcqRAd6Q0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/financialReport/getIncomeExpenseReport?startDate=2024-01-01&endDate=2025-03-20",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"financialReport",
+						"getIncomeExpenseReport"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2024-01-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-03-20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category Breakdown Reoprt",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNjk3OTkyLCJleHAiOjE3NDE5NTcxOTJ9.B171wr4joX4GpdJJrVK1YY0-7dEf0gMXmjcqRAd6Q0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/financialReport/getCategoryBreakdownReport?startDate=2024-01-01&endDate=2025-03-20&category=Food",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"financialReport",
+						"getCategoryBreakdownReport"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2024-01-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-03-20"
+						},
+						{
+							"key": "category",
+							"value": "Food"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spending Trends",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNjk3OTkyLCJleHAiOjE3NDE5NTcxOTJ9.B171wr4joX4GpdJJrVK1YY0-7dEf0gMXmjcqRAd6Q0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/financialReport/getSpendingTrends?startDate=2024-09-10&endDate=2025-03-10&frequency=monthly",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"financialReport",
+						"getSpendingTrends"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2024-09-10"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-03-10"
+						},
+						{
+							"key": "frequency",
+							"value": "monthly"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Type Breakdown Report",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwMmU2ZWE3MmIwZmE1OGU3ZWU5NjAiLCJlbWFpbCI6ImRhbWl0aHJpbWVlZ2FtYTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzQxNjk3OTkyLCJleHAiOjE3NDE5NTcxOTJ9.B171wr4joX4GpdJJrVK1YY0-7dEf0gMXmjcqRAd6Q0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/financialReport/getTypeBreakdownReport?startDate=2024-09-10&endDate=2025-03-10&type=income",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"financialReport",
+						"getTypeBreakdownReport"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2024-09-10"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-03-10"
+						},
+						{
+							"key": "type",
+							"value": "income"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Budget Analysis",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MzNTVjM2Y0ZWM2ZTZmNDYzMTRkMWIiLCJlbWFpbCI6ImRpbnVtZWVnYW1hOTdAZ21haWwuY29tIiwiaWF0IjoxNzQxNjgyMjAxLCJleHAiOjE3NDE5NDE0MDF9.jj4jqAcnI54iXc39UPjD1oZb1hOg7UsL7mIzibpwY1k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/financialReport/getBudgetVsActual?month=3&year=2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"financialReport",
+						"getBudgetVsActual"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "3"
+						},
+						{
+							"key": "year",
+							"value": "2025"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Summary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MzNTVjM2Y0ZWM2ZTZmNDYzMTRkMWIiLCJlbWFpbCI6ImRpbnVtZWVnYW1hOTdAZ21haWwuY29tIiwiaWF0IjoxNzQxNjgyMjAxLCJleHAiOjE3NDE5NDE0MDF9.jj4jqAcnI54iXc39UPjD1oZb1hOg7UsL7mIzibpwY1k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/financialReport/getFinancialSummary?startDate=2025-01-01&endDate=2025-12-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"financialReport",
+						"getFinancialSummary"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2025-01-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-12-31"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
